@@ -6,7 +6,7 @@ export default function Profile() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/auth/profile", {
+    fetch("https://auth-backend-5u32.onrender.com/api/auth/profile", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },

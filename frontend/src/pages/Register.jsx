@@ -10,11 +10,14 @@ export default function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:5000/api/auth/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, password }),
-    });
+    const res = await fetch(
+      "https://auth-backend-5u32.onrender.com/api/auth/register",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, password }),
+      }
+    );
 
     if (res.ok) {
       navigate("/login");
